@@ -1,0 +1,16 @@
+Username/email : admindjango/praise@mail.xyz
+Password : AdminDjango1
+
+
+Staff:
+Username/email : orimisan@mailer.com
+Password : orimi1234
+
+Student:
+Username/email : favor@gmail.com
+Password : favor19@
+
+Username/email: test@mail.com
+Password: testuserone
+
+
