@@ -11,6 +11,8 @@ protobuf = "*"
 pydot = "*"
 pyparsing = "*"
 pytz = "*"
+dj-database-url = "*"
+gunicorn = "*"
 psycopg = "*"
 
 [dev-packages]
