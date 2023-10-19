@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-4xkl*v%(=6d6p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'https://sp-portal.onrender.com/']
 
 
 # Application definition
