@@ -11,9 +11,13 @@ protobuf = "*"
 pydot = "*"
 pyparsing = "*"
 pytz = "*"
+<<<<<<< HEAD
 dj-database-url = "*"
 psycopg2-binary = "*"
 whitenoise = {extras = ["brotli"], version = "*"}
+=======
+psycopg = "*"
+>>>>>>> stage
 
 [dev-packages]
 

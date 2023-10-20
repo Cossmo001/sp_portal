@@ -17,13 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+<<<<<<< HEAD
 # from student_management_system import settings
 from django.conf import settings
 # from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+=======
+from student_management_system import settings
+
+>>>>>>> stage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('student_management_app.urls')),
+<<<<<<< HEAD
 ] 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
@@ -31,3 +37,6 @@ if settings.DEBUG:
     
     
 #urlpatterns += staticfiles_urlpatterns()
+=======
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> stage
