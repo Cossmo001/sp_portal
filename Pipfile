@@ -11,10 +11,7 @@ protobuf = "*"
 pydot = "*"
 pyparsing = "*"
 pytz = "*"
-dj-database-url = "*"
-gunicorn = "*"
-psycopg2-binary = "*"
-whitenoise = {extras = ["brotli"], version = "*"}
+psycopg = "*"
 
 [dev-packages]
 
