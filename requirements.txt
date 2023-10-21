@@ -1,14 +1,13 @@
 asgiref==3.7.2
-<<<<<<< HEAD
 Brotli==1.1.0
 dj-database-url==2.1.0
-=======
->>>>>>> stage
 Django==4.2.6
 django-extensions==3.2.3
 graphviz==0.20.1
+packaging==23.2
 protobuf==4.24.4
 psycopg==3.1.12
+psycopg2-binary==2.9.9
 pydot==1.4.2
 pyparsing==3.1.1
 pytz==2023.3.post1

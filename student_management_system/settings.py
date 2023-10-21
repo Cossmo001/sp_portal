@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,10 +26,7 @@ SECRET_KEY = '4-b@%#nxmnl+)(_ogy^_q=tbp0bv13o8z66_3p2ta=1a+_%6az'
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
 DEBUG = True
-<<<<<<< HEAD
-=======
 
->>>>>>> stage
 ALLOWED_HOSTS = ['*']
 
 
@@ -40,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'whitenoise.runserver_nostatic',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -88,15 +84,12 @@ DATABASES = {
 }
 '''
 
-<<<<<<< HEAD
 DATABASES = {
     'default': dj_database_url.parse('postgres://pjdb_7z9u_user:gMCjCG1ppmG2vvOrW4AhNOOw5NuLlc3L@dpg-cko8sdcve64s73cldu3g-a.frankfurt-postgres.render.com/pjdb_7z9u',
         conn_max_age=600
     )
 }
 
-=======
->>>>>>> stage
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -132,11 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-<<<<<<< HEAD
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-MEDIA_URL ='/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-=======
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -146,7 +135,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
->>>>>>> stage
 #For Custom USER
 AUTH_USER_MODEL = "student_management_app.CustomUser"
 
