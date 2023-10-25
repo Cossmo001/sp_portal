@@ -9,6 +9,8 @@ from student_management_app.EmailBackEnd import EmailBackEnd
 def home(request):
     return render(request, 'index.html')
 
+def base_layout(request):
+    return render(request, 'base.html')
 
 def loginPage(request):
     return render(request, 'login.html')
