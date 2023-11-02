@@ -25,7 +25,7 @@ SECRET_KEY = '4-b@%#nxmnl+)(_ogy^_q=tbp0bv13o8z66_3p2ta=1a+_%6az'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,20 +76,21 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 '''
+
 DATABASES = {
     'default': dj_database_url.parse('postgres://pjdb_7z9u_user:gMCjCG1ppmG2vvOrW4AhNOOw5NuLlc3L@dpg-cko8sdcve64s73cldu3g-a.frankfurt-postgres.render.com/pjdb_7z9u',
         conn_max_age=600
     )
 }
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
