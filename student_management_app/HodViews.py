@@ -344,6 +344,8 @@ def add_student_save(request):
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             address = form.cleaned_data['address']
+            academic_background = form.cleaned_data['academic_background']
+            matric_number = form.cleaned_data['matric_number']
             session_year_id = form.cleaned_data['session_year_id']
             course_id = form.cleaned_data['course_id']
             gender = form.cleaned_data['gender']
@@ -363,7 +365,8 @@ def add_student_save(request):
             try:
                 user = CustomUser.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name, user_type=3)
                 user.students.address = address
-
+                user.students.academic_background = academic_background
+                user.students.matric_number = matric_number
                 course_obj = Courses.objects.get(id=course_id)
                 user.students.course_id = course_obj
 
@@ -597,6 +600,14 @@ def check_email_exist(request):
     else:
         return HttpResponse(False)
 
+@csrf_exempt
+def check_password_exist(request):
+    password = request.POST.get("password")
+    user_obj = CustomUser.objects.filter(password=password).exists()
+    if user_obj:
+        return HttpResponse(True)
+    else:
+        return HttpResponse(False)
 
 @csrf_exempt
 def check_username_exist(request):

@@ -14,7 +14,8 @@ class AddStudentForm(forms.Form):
     last_name = forms.CharField(label="Last Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     username = forms.CharField(label="Username", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     address = forms.CharField(label="Address", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-
+    academic_background = forms.CharField(label="Academic Background", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
+    matric_number = forms.CharField(label="Matric Number", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     #For Displaying Courses
     try:
         courses = Courses.objects.all()
@@ -56,7 +57,7 @@ class EditStudentForm(forms.Form):
     last_name = forms.CharField(label="Last Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     username = forms.CharField(label="Username", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     address = forms.CharField(label="Address", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
-
+    matric_number = forms.CharField(label="Matric Number", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))
     #For Displaying Courses
     try:
         courses = Courses.objects.all()

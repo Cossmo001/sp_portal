@@ -103,6 +103,38 @@
                 }
                 
             })
+ 
+            $("#id_password").keyup(function(){
+                var password = $(this).val();
+
+                if(password!=""){
+                    $.ajax({
+                        url : '{% url 'check_password_exist' %}',
+                        type : 'POST',
+                        data : {password:password}
+                    })
+                    .done(function(response){
+                        //console.log(response);
+
+                        if(response == "True"){
+                            $(".password_error").remove();
+                            $("<span class='password_error' style='color: red; padding: 5px; font-weight: bold;'> Password Not Available. </span>").insertAfter("#id_password")
+                        }
+                        else{
+                            $(".password_error").remove();
+                            $("<span class='password_error' style='color: green; padding: 5px; font-weight: bold;'> Password Available. </span>").insertAfter("#id_password")
+                        }
+                    })
+
+                    .fail(function(){
+                        console.log("Failed");
+                    })
+                }
+                else{
+                    $(".password_error").remove();
+                }
+                
+            })
         })
     </script>
 
