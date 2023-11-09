@@ -86,7 +86,7 @@ DATABASES = {
 '''
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://pjdb_7z9u_user:gMCjCG1ppmG2vvOrW4AhNOOw5NuLlc3L@dpg-cko8sdcve64s73cldu3g-a.frankfurt-postgres.render.com/pjdb_7z9u',
+    'default': dj_database_url.parse('postgres://portaldb_t5ej_user:yli1CA5otPwwU4mI0KxOUfjtqLNA3gEB@dpg-cl6378k72pts73fr08k0-a.frankfurt-postgres.render.com/portaldb_t5ej',
         conn_max_age=600
     )
 }
