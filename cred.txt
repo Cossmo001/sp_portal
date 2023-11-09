@@ -1,3 +1,0 @@
-email : sptechsolutions@mail.com
-username : sptechsolutions
-password : sptech
